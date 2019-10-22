@@ -4,6 +4,11 @@
 }
 .logo-nav{
     width: 50px;
+    &-mobile{
+        @media screen and (max-width: 576px) {
+            margin: 0 auto 0 0 !important;
+        }
+    }
 }
 .bg-blue{
     background-color: #325d79;
@@ -14,20 +19,63 @@
     align-content: center;
 }
 .nav-left{
-    width: 300px;
+    width: 200px;
+    @media screen and (max-width: 576px) {
+        display: none;
+    }
 }
 .nav-right{
-    width: 300px
+    width: 200px;
 }
 .nav-bg{
     background: black;
-    height: 50px;
-    display: flex;
-    align-items: center;
+    min-height: 50px;
+    padding: 0 1rem;
     a{
+        display: flex;
+        align-items: center;
+        height: 100%;
         color: white;
         width: 16.66%;
+        @media screen and (max-width: 992px) {
+            width: 100%;
+        }
         text-align: center;
         text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        transition: all 0.5s ease-in-out;
+        &:hover{
+            background: white;
+            color: black;
+        }
+        &:focus{
+            background: white;
+            color: black;
+        }
+        .nav-menu{
+            margin: 0 auto;
+            width: 200px;
+            line-height: 3.13;
+        }
     }
+    
+}
+.text-area{
+    min-height: 200px;
+}
+.banner-watch{
+    margin: 20px 0;
+    img{
+        height: 300px;
+        border-radius: 4px;
+        object-fit: cover;
+        width: 100%
+    }
+}
+.contact-form{
+    margin: 0 0 1.5rem 0;
+}
+.policy-text{
+    padding: 13px 20px;
+    text-align: left;
 }
